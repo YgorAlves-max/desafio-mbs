@@ -36,45 +36,42 @@ npm run lint
 
 ## Utilizar o site 
 -- Clicar no 'Get Started':
-
 <br>
+
 ![image](https://user-images.githubusercontent.com/99425256/226545328-3db653ab-4f22-482e-8298-8eb25e9a551a.png)
 
 --Cadastrar um Usuario:
-
 <br>
+
 ![image](https://user-images.githubusercontent.com/99425256/226545945-cb24c096-5db1-41ee-a502-a612069975f9.png)
 
 --Cadastre o seu Usuario:
-
 <br>
+
 ![image](https://user-images.githubusercontent.com/99425256/226546090-458912bd-204f-4931-bc3f-cb0d50622a0f.png)
   
 --Feche a Modal: 
-
 <br>
+
 ![image](https://user-images.githubusercontent.com/99425256/226546204-3f522298-f442-4133-9bc1-0b882a019257.png)
+
 <br>
-
 --Se houver um usuario cadastrado:
-
 <br>
 --Entre com o seu Usuario:
 <br>
 
 ![image](https://user-images.githubusercontent.com/99425256/226546282-c6d069a3-56a0-41c9-9065-a0dd1d129b72.png)
-<br>
 
+<br>
 --Clique em 'Entrar':
-
 <br>
+
 ![image](https://user-images.githubusercontent.com/99425256/226546398-f77b0412-3fb6-4a3e-95d2-113f5bdf1a8e.png)
+
 <br>
-
 ## Tela de tasks
-
  --Filtrar por Status:
- 
 <br>
 -Clique no Select e selecione algum filtro:
 <br> 
