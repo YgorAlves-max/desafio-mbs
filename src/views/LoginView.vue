@@ -3,30 +3,21 @@ import { useCountStore } from "../stores/counter";
 import { storeToRefs } from "pinia";
 import ButtonComponent from "../components/ButtonComponent.vue";
 import ModalLoginComponent from "./ModalLoginView.vue";
-import { computed } from "vue";
+import { ref, computed } from "vue";
 const useStateUser = useCountStore();
 useStateUser.userState();
 const { data } = storeToRefs(useStateUser);
 computed(() => data.value.data);
+const openModal = ref(false);
+const openModalReg = ref(false);
+function modalOpenClick() {
+  openModal.value = !openModal.value;
+}
+function modalOpenRegClick() {
+  openModalReg.value = !openModalReg.value;
+}
 </script>
-<script>
-export default {
-  data() {
-    return {
-      openModal: false,
-      openModalReg: false,
-    };
-  },
-  methods: {
-    modalOpenClick() {
-      this.openModal = !this.openModal;
-    },
-    modalOpenRegClick() {
-      this.openModalReg = !this.openModalReg;
-    },
-  },
-};
-</script>
+
 <template>
   <main class="c">
     <section class="c-menu">
@@ -36,8 +27,8 @@ export default {
       <ButtonComponent rota="/" text="Voltar"></ButtonComponent>
     </section>
 
-    <ModalLoginComponent @register-event="modalOpenClick" v-if="this.openModal" :register="false"></ModalLoginComponent>
-    <ModalLoginComponent @register-event="modalOpenRegClick" v-if="this.openModalReg" :register="true">
+    <ModalLoginComponent @register-event="modalOpenClick" v-if="openModal" :register="false"></ModalLoginComponent>
+    <ModalLoginComponent @register-event="modalOpenRegClick" v-if="openModalReg" :register="true">
     </ModalLoginComponent>
   </main>
 </template>
@@ -55,10 +46,11 @@ export default {
     align-items: center;
     width: 100%;
     gap: 15px;
+
     @media screen and (min-width: 768px) {
-    width: 600px;
-    margin: 0 auto;
-  }
+      width: 600px;
+      margin: 0 auto;
+    }
   }
 }
 </style>

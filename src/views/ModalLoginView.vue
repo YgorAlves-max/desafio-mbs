@@ -2,10 +2,9 @@
 import "../components/styles/styles.scss";
 import { useCountStore } from "../stores/counter";
 import ButtonComponent from "../components/ButtonComponent.vue";
-import { ref } from "vue";
 import { storeToRefs } from "pinia";
 import router from "../router";
-import { computed } from "vue";
+import { computed, defineProps, ref } from "vue";
 const useStateUser = useCountStore();
 
 const name = ref("");
@@ -49,30 +48,28 @@ function confirmLoginUser() {
     logine[0].login === payload.loginPay &&
     logine[0].password === payload.passwordPay
   ) {
-    router.push({ name: "home"});
+    router.push({ name: "home" });
   } else {
     modalInvalid.value = true;
   }
 }
-</script>
-<script>
-export default {
-  props: ["rota", "text", "register"],
-  methods: {
-    submit() {
-      this.$emit("registerEvent");
-    },
-  },
-};
+
+const props = defineProps({
+  text: String,
+  rota: String,
+  register: null
+})
+const emit = defineEmits(['registerEvent'])
+
 </script>
 <template>
   <section class="c__ModalOpened">
     <main class="c__Modal css-selector-Modal">
-      <div class="close" @click="$emit('registerEvent')">❌</div>
+      <div class="close" @click="emit('registerEvent', false)">❌</div>
       <div class="c">
         <div class="menu">
-          <label v-if="register" for="Username">Usuario</label>
-          <label v-if="!register" for="Username">Email</label>
+          <label v-if="props.register" for="Username">Usuario</label>
+          <label v-if="!props.register" for="Username">Email</label>
           <input v-model="name" class="menu__item" type="text" name="Username" id="username" required />
           <p v-if="invalid" v-bind:class="{ erro: invalid }">Invalido ❌</p>
         </div>
@@ -90,8 +87,10 @@ export default {
         </div>
         <div class="modalInvalid" v-if="modalInvalid">Digite o usuario e senha!</div>
         <div class="menu">
-          <ButtonComponent v-if="register" @button-event="submitRegisterUser" rota="" text="Cadastar"></ButtonComponent>
-          <ButtonComponent v-if="!register" @button-event="confirmLoginUser" rota="" text="Entrar"></ButtonComponent>
+          <ButtonComponent v-if="props.register" @button-event="submitRegisterUser" rota="" text="Cadastar">
+          </ButtonComponent>
+          <ButtonComponent v-if="!props.register" @button-event="confirmLoginUser" rota="" text="Entrar">
+          </ButtonComponent>
         </div>
       </div>
     </main>
@@ -100,7 +99,7 @@ export default {
 <style lang="scss" scoped>
 .close {
   display: flex;
-  justify-content: flex-end;  
+  justify-content: flex-end;
   cursor: pointer;
 }
 

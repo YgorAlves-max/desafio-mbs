@@ -1,9 +1,8 @@
 <script setup>
-import { ref } from "vue";
 import { useCountStore } from "../stores/counter";
 import { storeToRefs } from "pinia";
 import "./styles/styles.scss";
-import { computed } from "vue";
+import { computed,ref } from "vue";
 const useStateUser = useCountStore();
 useStateUser.taskStaste();
 
