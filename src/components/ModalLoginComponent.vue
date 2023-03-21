@@ -5,7 +5,7 @@ import ButtonComponent from "./ButtonComponent.vue";
 import { ref } from "vue";
 import { storeToRefs } from "pinia";
 import router from "../router";
-
+import { computed } from "vue";
 const useStateUser = useCountStore();
 
 const name = ref("");
@@ -23,7 +23,6 @@ function submitRegisterUser() {
     active: false,
   };
   if (!name.value || !email.value || !password.value) {
-    console.log("invalido");
     invalid.value = true;
   } else {
     invalid.value = false;
@@ -32,7 +31,10 @@ function submitRegisterUser() {
 }
 const { data } = storeToRefs(useStateUser);
 
-const dados = data.value.data;
+const dados = computed(() => {
+  return data.value;
+});
+console.log(dados.value.data, "data");
 let modalInvalid = ref(false);
 
 function confirmLoginUser() {
@@ -41,10 +43,9 @@ function confirmLoginUser() {
     passwordPay: password.value,
   };
   useStateUser.userState(payload);
-  const logine = dados.filter((e) => {
+  const logine = dados.value.data.filter((e) => {
     return e.login.includes(payload.loginPay), e.password.includes(payload.passwordPay);
   });
-  console.log(payload);
   if (
     logine[0].login === payload.loginPay &&
     logine[0].password === payload.passwordPay
