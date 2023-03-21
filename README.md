@@ -48,10 +48,9 @@ npm run lint
   ![image](https://user-images.githubusercontent.com/99425256/226546204-3f522298-f442-4133-9bc1-0b882a019257.png)
 
 -- Se houver um usuario cadastrado: 
-  --Entre com o seu Usuario:
-   ```sh
-   ![image](https://user-images.githubusercontent.com/99425256/226546282-c6d069a3-56a0-41c9-9065-a0dd1d129b72.png)
-   ```
+--Entre com o seu Usuario:
+   
+![image](https://user-images.githubusercontent.com/99425256/226546282-c6d069a3-56a0-41c9-9065-a0dd1d129b72.png)
    --Clique em 'Entrar':
    ![image](https://user-images.githubusercontent.com/99425256/226546398-f77b0412-3fb6-4a3e-95d2-113f5bdf1a8e.png)
 ## Tela de tasks
