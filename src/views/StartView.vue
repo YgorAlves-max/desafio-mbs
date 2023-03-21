@@ -4,8 +4,8 @@ import ButtonComponent from "../components/ButtonComponent.vue";
 
 <template>
   <main class="c">
-    <img class="c__item" src="src/assets/img/image.png" alt="" />
-    <img class="c__item2" src="src/assets/img/05.webp" alt="">
+    <img class="c__item" src="../assets/img/image.png" alt="" />
+    <img class="c__item2" src="../assets/img/05.webp" alt="">
     <section class="c-menu">
       <h1>Desafio MSB</h1>
       <h1>TO DO LSIT</h1>
