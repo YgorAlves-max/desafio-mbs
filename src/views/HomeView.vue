@@ -51,6 +51,9 @@ function toggle() {
     width: 80%;
     padding: 5px;
     border-radius: 6px;
+    @media screen and (min-width: 768px) {
+      width: 400px;
+    }
   }
 }
 

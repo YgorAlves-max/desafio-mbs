@@ -63,7 +63,6 @@ export default {
 </script>
 <template>
   <main class="cont">
-    <h1>Agenda</h1>
     <div class="cont-menu">
       <section v-for="item of items" :key="item.id" class="cont-content">
         <div class="container css-selector">
@@ -116,6 +115,10 @@ export default {
   background-color: #7e64ff;
   border-radius: 30px;
 
+  @media screen and (min-width:768px) {
+    width: 600px;
+  }
+
   &-input {
     width: 100%;
     padding: 10px;
@@ -155,6 +158,7 @@ export default {
   justify-content: space-between;
 
   button {
+    cursor: pointer;
     padding: 10px;
     border-radius: 10px;
     box-shadow: none;
@@ -198,12 +202,19 @@ export default {
   z-index: 105;
   scale: 0.4;
   left: 76%;
-  background: #8159fa;
+  background: #c4b0ff;
   border-radius: 50%;
   color: white;
 
   img {
     scale: 0.6;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    top: -10px;
+    bottom: inherit;
   }
 }
 
@@ -218,6 +229,7 @@ export default {
 .deletar {
   display: flex;
   align-items: flex-end;
+  cursor: pointer;
 }
 
 .container {
