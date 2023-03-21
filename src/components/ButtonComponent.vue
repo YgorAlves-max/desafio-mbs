@@ -11,7 +11,8 @@ export default {
 
 <template>
   <div class="c-flex">
-    <RouterLink :id="text" :to="rota" class=" c__button css-selector" @click="$emit('buttonEvent')">{{ text }}</RouterLink>
+    <RouterLink :id="text" :to="rota" class=" c__button css-selector" @click="$emit('buttonEvent')">{{ text }}
+    </RouterLink>
   </div>
 </template>
 
@@ -20,12 +21,14 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: center;
-  &-flex{
+
+  &-flex {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: center;
   }
+
   &__button {
     width: 70%;
     padding: 15px;
@@ -110,5 +113,4 @@ export default {
   100% {
     background-position: 0% 46%;
   }
-}
-</style>
+}</style>
