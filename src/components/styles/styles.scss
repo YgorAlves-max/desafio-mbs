@@ -1,0 +1,103 @@
+@import './modal.scss';
+
+.menu {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 15px;
+  height: 133px;
+  justify-content: center;
+  &__item {
+    font-weight: 500;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 2px 2px #7971b9;
+  }
+
+  :focus-visible {
+    outline: none;
+  }
+
+  a {
+    cursor: pointer;
+    text-decoration: underline;
+    transition: ease-in-out 200ms;
+  }
+
+  a:hover {
+    transition: ease-in-out 200ms;
+    scale: 1.1;
+  }
+}
+:nth-child(3),
+:nth-child(4) {
+  align-items: center;
+}
+
+.css-selector-Modal {
+  background: linear-gradient(241deg, #e4e3ed, #7a6cd9, #3281df);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 0s ease infinite;
+  -moz-animation: AnimationName 0s ease infinite;
+  -o-animation: AnimationName 0s ease infinite;
+  animation: AnimationName 0s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 46%;
+  }
+
+  50% {
+    background-position: 100% 55%;
+  }
+
+  100% {
+    background-position: 0% 46%;
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 46%;
+  }
+
+  50% {
+    background-position: 100% 55%;
+  }
+
+  100% {
+    background-position: 0% 46%;
+  }
+}
+
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 46%;
+  }
+
+  50% {
+    background-position: 100% 55%;
+  }
+
+  100% {
+    background-position: 0% 46%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 46%;
+  }
+
+  50% {
+    background-position: 100% 55%;
+  }
+
+  100% {
+    background-position: 0% 46%;
+  }
+}
