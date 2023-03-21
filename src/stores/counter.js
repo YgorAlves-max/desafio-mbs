@@ -49,7 +49,7 @@ export const useCountStore = defineStore("state", {
         this.alertErro = true
       }
     },
-    atulizarTasks(atualizarPayload,id) {
+    atulizarTasks(atualizarPayload, id) {
       try {
         axios.put(API_URL + `/tasks/${id}`, atualizarPayload)
       }
@@ -64,6 +64,20 @@ export const useCountStore = defineStore("state", {
       catch (error) {
         this.alertErro = true
       }
-    }
-  },
+    },
+    doneTasks(payload) {
+      this.taskStaste()
+      setTimeout(() => {
+        let Done = this.data.data.filter(e => e.done == payload.done)
+        if (payload.done == 'Todos') {
+          Done = this.data.data.filter(e => e)
+          return this.data.data = Done
+        }
+        else {
+          this.data.data = Done
+        }
+         this.data.data = Done
+      }, 400);
+    },
+  }
 });
