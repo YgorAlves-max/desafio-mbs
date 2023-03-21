@@ -8,9 +8,7 @@ const useStateUser = useCountStore();
 useStateUser.taskStaste();
 
 const { data } = storeToRefs(useStateUser);
-const items = computed(() => {
-  return data.value.data;
-});
+
 let cardOpen = ref(false);
 
 const name = ref("");
@@ -47,24 +45,31 @@ function deletaTask(item) {
     useStateUser.taskStaste();
   }, 1000);
 }
-</script>
-<script>
-export default {
-  props: {
-    reload: Boolean,
-  },
-  watch: {
-    reload() {
-      this.deletaTask();
-      this.addTask();
-    },
-  },
-};
+const selected = ref('Todos');
+const filtreItems = computed(() => {
+  return data.value.data
+})
+function selectOptions() {
+  const payload = {
+    done: selected.value,
+  }
+  if (payload.done == '') {
+    useStateUser.doneTasks(payload)
+  } else {
+    useStateUser.doneTasks(payload)
+  }
+}
 </script>
 <template>
   <main class="cont">
+    <select class="select" @change="selectOptions" v-model="selected">
+      Filtro
+      <option value="Todos">Todos</option>
+      <option :value="false">Ativos</option>
+      <option :value="true">Conlcuido</option>
+    </select>
     <div class="cont-menu">
-      <section v-for="item of items" :key="item.id" class="cont-content">
+      <section v-for="item of filtreItems " :key="item.id" class="cont-content">
         <div class="container css-selector">
           <div class="container-title">
             <label class="container-label" :for="item.name">
