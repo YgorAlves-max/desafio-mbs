@@ -67,8 +67,9 @@ npm run lint
  -- Filtrar por Status:
 <br>
 -Clique no Select e selecione algum filtro:
-![image](https://user-images.githubusercontent.com/99425256/226728133-199c98a9-d67d-4a43-98cc-d86a0cb098f5.png)
-
+<br>
+![image](https://user-images.githubusercontent.com/99425256/226728218-905bf6e2-0ff2-4bb4-9951-002f1d02225a.png)
+<br>
  -- Mude o status para concluido ou ativa:
 <br>
 ![image](https://user-images.githubusercontent.com/99425256/226546750-ab8b2f9c-3d05-4197-89d4-221c6814487d.png)
