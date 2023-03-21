@@ -7,6 +7,7 @@
   padding: 15px;
   height: 133px;
   justify-content: center;
+
   &__item {
     font-weight: 500;
     padding: 10px;
@@ -31,6 +32,7 @@
     scale: 1.1;
   }
 }
+
 :nth-child(3),
 :nth-child(4) {
   align-items: center;

@@ -19,6 +19,7 @@ import ButtonComponent from "../components/ButtonComponent.vue";
   flex-direction: column;
   text-align: center;
   background-color: #F2F5FF;
+
   &-menu {
     background-color: #F2F5FF;
     height: 250px;

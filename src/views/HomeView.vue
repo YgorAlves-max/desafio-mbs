@@ -8,27 +8,23 @@ function toggle() {
 </script>
 <template>
   <main class="c">
-    <router-link to="/">Voltar</router-link>
-    <h1>Olá</h1>
+    <div class="c-flex">
+      <div class="c-back">
+        <router-link to="/"><img style="width: 20px"
+            src="../components/icons/botao-de-seta-para-a-esquerda-do-teclado.png" alt="Voltar" /></router-link>
+      </div>
+      <h1>Olá</h1>
+    </div>
     <div class="c-menu">
       <div class="c__box css-selector" @click="toggle">
         <div class="boxItem">
-          <RouterLink
-            v-bind:class="{ ATIVADA: isActive, DESATIVADA: !isActive }"
-            class="boxItem__item"
-            to="schedule"
-          >
+          <RouterLink v-bind:class="{ ATIVADA: isActive, DESATIVADA: !isActive }" class="boxItem__item" to="schedule">
             Agenda
           </RouterLink>
         </div>
         <div class="boxItem">
-          <RouterLink
-            v-bind:class="{ ATIVADA: isActive2, DESATIVADA: !isActive2 }"
-            class="boxItem__item note"
-            to="note"
-          >
-            Observação</RouterLink
-          >
+          <RouterLink v-bind:class="{ ATIVADA: isActive2, DESATIVADA: !isActive2 }" class="boxItem__item note" to="note">
+            Observação</RouterLink>
         </div>
       </div>
     </div>
@@ -38,6 +34,14 @@ function toggle() {
 <style lang="scss" scoped>
 .c {
   background-color: #f2f5ff;
+
+  &-flex {
+    padding: 10px;
+  }
+
+  &-back {
+    text-align: initial;
+  }
 
   &-menu {
     display: flex;

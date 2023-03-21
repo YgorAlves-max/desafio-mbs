@@ -34,7 +34,6 @@ function addTask() {
     descricao: descricao.value,
   };
   if (name.value && descricao.value != "") {
-    console.log(payload);
     useStateUser.registerTasks(payload);
     setTimeout(() => {
       useStateUser.taskStaste();
@@ -66,18 +65,12 @@ export default {
   <main class="cont">
     <h1>Agenda</h1>
     <div class="cont-menu">
-      <section v-for="item of items" :key="item.name" class="cont-content">
+      <section v-for="item of items" :key="item.id" class="cont-content">
         <div class="container css-selector">
           <div class="container-title">
             <label class="container-label" :for="item.name">
-              Reunião com {{ item.name }}</label
-            >
-            <input
-              v-model="item.done"
-              @click="toggle(item)"
-              :name="item.name"
-              type="checkbox"
-            />
+              Reunião com {{ item.name }}</label>
+            <input v-model="item.done" @click="toggle(item)" :name="item.name" type="checkbox" />
           </div>
           <div>
             <div class="container-underline"></div>

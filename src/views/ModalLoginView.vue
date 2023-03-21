@@ -1,7 +1,7 @@
 <script setup>
-import "./styles/styles.scss";
+import "../components/styles/styles.scss";
 import { useCountStore } from "../stores/counter";
-import ButtonComponent from "./ButtonComponent.vue";
+import ButtonComponent from "../components/ButtonComponent.vue";
 import { ref } from "vue";
 import { storeToRefs } from "pinia";
 import router from "../router";
@@ -34,7 +34,6 @@ const { data } = storeToRefs(useStateUser);
 const dados = computed(() => {
   return data.value;
 });
-console.log(dados.value.data, "data");
 let modalInvalid = ref(false);
 
 function confirmLoginUser() {
@@ -50,7 +49,7 @@ function confirmLoginUser() {
     logine[0].login === payload.loginPay &&
     logine[0].password === payload.passwordPay
   ) {
-    router.push({ name: "home", parms: { user: payload.loginPay } });
+    router.push({ name: "home"});
   } else {
     modalInvalid.value = true;
   }
@@ -74,25 +73,12 @@ export default {
         <div class="menu">
           <label v-if="register" for="Username">Usuario</label>
           <label v-if="!register" for="Username">Email</label>
-          <input
-            v-model="name"
-            class="menu__item"
-            type="text"
-            name="Username"
-            id="username"
-            required
-          />
+          <input v-model="name" class="menu__item" type="text" name="Username" id="username" required />
           <p v-if="invalid" v-bind:class="{ erro: invalid }">Invalido ❌</p>
         </div>
         <div class="menu">
           <label for="Password">Senha</label>
-          <input
-            v-model="password"
-            class="menu__item"
-            type="text"
-            name="Password"
-            required
-          />
+          <input v-model="password" class="menu__item" type="text" name="Password" required />
           <p v-if="invalid" v-bind:class="{ erro: invalid }">Invalido ❌</p>
         </div>
         <div v-if="register">
@@ -104,18 +90,8 @@ export default {
         </div>
         <div class="modalInvalid" v-if="modalInvalid">Digite o usuario e senha!</div>
         <div class="menu">
-          <ButtonComponent
-            v-if="register"
-            @button-event="submitRegisterUser"
-            rota=""
-            text="Cadastar"
-          ></ButtonComponent>
-          <ButtonComponent
-            v-if="!register"
-            @button-event="confirmLoginUser"
-            rota=""
-            text="Entrar"
-          ></ButtonComponent>
+          <ButtonComponent v-if="register" @button-event="submitRegisterUser" rota="" text="Cadastar"></ButtonComponent>
+          <ButtonComponent v-if="!register" @button-event="confirmLoginUser" rota="" text="Entrar"></ButtonComponent>
         </div>
       </div>
     </main>

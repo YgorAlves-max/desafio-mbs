@@ -2,7 +2,7 @@
 import { useCountStore } from "../stores/counter";
 import { storeToRefs } from "pinia";
 import ButtonComponent from "../components/ButtonComponent.vue";
-import ModalLoginComponent from "../components/ModalLoginComponent.vue";
+import ModalLoginComponent from "./ModalLoginView.vue";
 import { computed } from "vue";
 const useStateUser = useCountStore();
 useStateUser.userState();
@@ -31,29 +31,13 @@ export default {
   <main class="c">
     <section class="c-menu">
       <h1>Login</h1>
-      <ButtonComponent
-        rota=""
-        @button-event="modalOpenClick"
-        text="Entrar"
-      ></ButtonComponent>
-      <ButtonComponent
-        rota=""
-        @button-event="modalOpenRegClick"
-        text="Cadastrar"
-      ></ButtonComponent>
+      <ButtonComponent rota="" @button-event="modalOpenClick" text="Entrar"></ButtonComponent>
+      <ButtonComponent rota="" @button-event="modalOpenRegClick" text="Cadastrar"></ButtonComponent>
       <ButtonComponent rota="/" text="Voltar"></ButtonComponent>
     </section>
 
-    <ModalLoginComponent
-      @register-event="modalOpenClick"
-      v-if="this.openModal"
-      :register="false"
-    ></ModalLoginComponent>
-    <ModalLoginComponent
-      @register-event="modalOpenRegClick"
-      v-if="this.openModalReg"
-      :register="true"
-    >
+    <ModalLoginComponent @register-event="modalOpenClick" v-if="this.openModal" :register="false"></ModalLoginComponent>
+    <ModalLoginComponent @register-event="modalOpenRegClick" v-if="this.openModalReg" :register="true">
     </ModalLoginComponent>
   </main>
 </template>
