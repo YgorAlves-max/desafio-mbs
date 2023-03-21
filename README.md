@@ -66,6 +66,7 @@ npm run lint
  -- Mude o status para concluido ou ativa:
 <br>
 ![image](https://user-images.githubusercontent.com/99425256/226546750-ab8b2f9c-3d05-4197-89d4-221c6814487d.png)
+<br>
  -- Delete uma atividade:
 <br>
  ![image](https://user-images.githubusercontent.com/99425256/226546897-55d4c5bb-4256-4b0f-a65d-5788963b43e1.png)
