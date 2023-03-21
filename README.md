@@ -63,27 +63,33 @@ npm run lint
 <br>
 
 ## Tela de tasks
-<br>
- -- Filtrar por Status:
+ --Filtrar por Status:
 <br>
 -Clique no Select e selecione algum filtro:
-<br>
+<br> 
+
 ![image](https://user-images.githubusercontent.com/99425256/226728218-905bf6e2-0ff2-4bb4-9951-002f1d02225a.png)
+
 <br>
  -- Mude o status para concluido ou ativa:
 <br>
+
 ![image](https://user-images.githubusercontent.com/99425256/226546750-ab8b2f9c-3d05-4197-89d4-221c6814487d.png)
+
 <br>
  -- Delete uma atividade:
 <br>
+
  ![image](https://user-images.githubusercontent.com/99425256/226546897-55d4c5bb-4256-4b0f-a65d-5788963b43e1.png)
 <br>
 -- Adicione uma atividade: 
 <br>
+
 ![image](https://user-images.githubusercontent.com/99425256/226547597-cd00c8a4-da09-44aa-b1b3-fcabf9657144.png)
 <br>
 -- Preencha os campos e clique em adicionar:
 <br>
+
 ![image](https://user-images.githubusercontent.com/99425256/226547740-fa7b02ab-5cb3-4a13-b29b-c36776338b1c.png)
 
 
