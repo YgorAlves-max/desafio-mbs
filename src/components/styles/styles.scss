@@ -47,8 +47,9 @@
   -o-animation: AnimationName 0s ease infinite;
   animation: AnimationName 0s ease infinite;
 }
-::-webkit-scrollbar{
-  width: 15px;
+body::-webkit-scrollbar{
+  height: 0px; 
+  width: 10px;
 }
 ::-webkit-scrollbar-track{
   border-radius: 35px;
@@ -56,6 +57,7 @@
 }
 ::-webkit-scrollbar-thumb{
   border-radius: 35px;
+  overflow: auto;
   background-color: #9c2cf3;
 }
 @-webkit-keyframes AnimationName {
