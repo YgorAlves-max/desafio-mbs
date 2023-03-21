@@ -76,8 +76,8 @@ export default {
             <div class="container-underline"></div>
             <div class="descricao">
               <p>{{ item.descricao }}</p>
-
               <div class="deletar" @click="deletaTask(item)">🗑️</div>
+
             </div>
           </div>
         </div>
@@ -218,10 +218,8 @@ export default {
 .container {
   color: white;
   padding: 10px;
-  box-shadow: 0px 0px 2px 2px black;
-  border: solid 1px black;
+  box-shadow: 0px 2px 4px 2px #585454ab;
   border-radius: 16px;
-
   &-title {
     display: flex;
     justify-content: space-between;

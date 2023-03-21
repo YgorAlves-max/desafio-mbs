@@ -18,13 +18,9 @@ function toggle() {
     <div class="c-menu">
       <div class="c__box css-selector" @click="toggle">
         <div class="boxItem">
-          <RouterLink v-bind:class="{ ATIVADA: isActive, DESATIVADA: !isActive }" class="boxItem__item" to="schedule">
+          <RouterLink class="boxItem__item" to="schedule">
             Agenda
           </RouterLink>
-        </div>
-        <div class="boxItem">
-          <RouterLink v-bind:class="{ ATIVADA: isActive2, DESATIVADA: !isActive2 }" class="boxItem__item note" to="note">
-            Observação</RouterLink>
         </div>
       </div>
     </div>
@@ -51,7 +47,7 @@ function toggle() {
 
   &__box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 80%;
     padding: 5px;
     border-radius: 6px;
@@ -67,6 +63,7 @@ function toggle() {
   align-items: center;
 
   &__item {
+    background-color: white;
     padding: 10px;
     border-radius: 5px;
     width: 100%;
@@ -77,13 +74,6 @@ function toggle() {
   }
 }
 
-.ATIVADA {
-  background-color: white;
-}
-
-.DESATIVADA {
-  background-color: transparent;
-}
 
 .css-selector {
   background: linear-gradient(84deg, #9c2cf3, #673cf6, #673cf6);

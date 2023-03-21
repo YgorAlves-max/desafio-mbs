@@ -1,13 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import StartView from '../views/StartView.vue'
 import ScheduleComponent from '../components/ScheduleComponent.vue'
-import NoteComponent from '../components/NoteComponent.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'start',
+      path:'',
       component: StartView
     },
     {
@@ -25,10 +23,7 @@ const router = createRouter({
           path: 'schedule',
           component: ScheduleComponent
         },
-        {
-          path: 'note',
-          component: NoteComponent
-        }
+   
       ],
     },
 
