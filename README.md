@@ -36,6 +36,7 @@ npm run lint
 
 ## Utilizar o site 
 -- Clicar no 'Get Started':
+<br>
 ![image](https://user-images.githubusercontent.com/99425256/226545328-3db653ab-4f22-482e-8298-8eb25e9a551a.png)
 
 -- Cadastrar um Usuario:
