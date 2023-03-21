@@ -44,15 +44,15 @@ npm run lint
 --Cadastre o seu Usuario:
 ![image](https://user-images.githubusercontent.com/99425256/226546090-458912bd-204f-4931-bc3f-cb0d50622a0f.png)
   
-  --Feche a Modal: 
-  ![image](https://user-images.githubusercontent.com/99425256/226546204-3f522298-f442-4133-9bc1-0b882a019257.png)
+--Feche a Modal: 
+![image](https://user-images.githubusercontent.com/99425256/226546204-3f522298-f442-4133-9bc1-0b882a019257.png)
 
--- Se houver um usuario cadastrado: 
+--Se houver um usuario cadastrado: 
 --Entre com o seu Usuario:
-   
 ![image](https://user-images.githubusercontent.com/99425256/226546282-c6d069a3-56a0-41c9-9065-a0dd1d129b72.png)
-   --Clique em 'Entrar':
-   ![image](https://user-images.githubusercontent.com/99425256/226546398-f77b0412-3fb6-4a3e-95d2-113f5bdf1a8e.png)
+
+--Clique em 'Entrar':
+![image](https://user-images.githubusercontent.com/99425256/226546398-f77b0412-3fb6-4a3e-95d2-113f5bdf1a8e.png)
 ## Tela de tasks
  -- Mude o status para concluido ou ativa:
   ![image](https://user-images.githubusercontent.com/99425256/226546750-ab8b2f9c-3d05-4197-89d4-221c6814487d.png)
