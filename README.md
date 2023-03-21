@@ -39,7 +39,7 @@ npm run lint
 <br>
 ![image](https://user-images.githubusercontent.com/99425256/226545328-3db653ab-4f22-482e-8298-8eb25e9a551a.png)
 
---<h1> Cadastrar um Usuario:<h1/>
+--<h1> Cadastrar um Usuario:</>
 <br>
 
 ![image](https://user-images.githubusercontent.com/99425256/226545945-cb24c096-5db1-41ee-a502-a612069975f9.png)
