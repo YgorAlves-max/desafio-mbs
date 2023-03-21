@@ -2,7 +2,7 @@
 import { useCountStore } from "../stores/counter";
 import { storeToRefs } from "pinia";
 import "./styles/styles.scss";
-import { computed,ref } from "vue";
+import { computed, ref } from "vue";
 const useStateUser = useCountStore();
 useStateUser.taskStaste();
 
@@ -52,6 +52,9 @@ function selectOptions() {
   const payload = {
     done: selected.value,
   }
+  setTimeout(() => {
+    useStateUser.taskStaste();
+  }, 1100);
   if (payload.done == '') {
     useStateUser.doneTasks(payload)
   } else {
