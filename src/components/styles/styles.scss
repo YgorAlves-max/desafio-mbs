@@ -1,4 +1,6 @@
 @import './modal.scss';
+@import './select.scss';
+
 .menu {
   display: flex;
   align-items: flex-start;
@@ -45,7 +47,19 @@
   -o-animation: AnimationName 0s ease infinite;
   animation: AnimationName 0s ease infinite;
 }
-
+body::-webkit-scrollbar{
+  height: 0px; 
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  border-radius: 35px;
+  background-color: #898989;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 35px;
+  overflow: auto;
+  background-color: #9c2cf3;
+}
 @-webkit-keyframes AnimationName {
   0% {
     background-position: 0% 46%;
