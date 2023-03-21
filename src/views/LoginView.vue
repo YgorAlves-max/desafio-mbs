@@ -55,6 +55,10 @@ export default {
     align-items: center;
     width: 100%;
     gap: 15px;
+    @media screen and (min-width: 768px) {
+    width: 600px;
+    margin: 0 auto;
+  }
   }
 }
 </style>

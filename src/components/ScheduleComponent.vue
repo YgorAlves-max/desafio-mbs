@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { useCountStore } from "../stores/counter";
 import { storeToRefs } from "pinia";
-import "./styles/modal.scss";
+import "./styles/styles.scss";
 import { computed } from "vue";
 const useStateUser = useCountStore();
 useStateUser.taskStaste();
@@ -179,6 +179,11 @@ export default {
 
   &-menu {
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 
   &-content {
@@ -220,6 +225,7 @@ export default {
   padding: 10px;
   box-shadow: 0px 2px 4px 2px #585454ab;
   border-radius: 16px;
+
   &-title {
     display: flex;
     justify-content: space-between;

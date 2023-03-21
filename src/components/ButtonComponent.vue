@@ -10,7 +10,9 @@ export default {
 </script>
 
 <template>
-  <RouterLink :id="text" :to="rota" class="c__button css-selector" @click="$emit('buttonEvent')">{{ text }}</RouterLink>
+  <div class="c-flex">
+    <RouterLink :id="text" :to="rota" class=" c__button css-selector" @click="$emit('buttonEvent')">{{ text }}</RouterLink>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -18,7 +20,12 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: center;
-
+  &-flex{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
   &__button {
     width: 70%;
     padding: 15px;
