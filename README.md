@@ -41,8 +41,8 @@ npm run lint
 -- Cadastrar um Usuario:
 ![image](https://user-images.githubusercontent.com/99425256/226545945-cb24c096-5db1-41ee-a502-a612069975f9.png)
 
-  --Cadastre o seu Usuario:
-  ![image](https://user-images.githubusercontent.com/99425256/226546090-458912bd-204f-4931-bc3f-cb0d50622a0f.png)
+--Cadastre o seu Usuario:
+![image](https://user-images.githubusercontent.com/99425256/226546090-458912bd-204f-4931-bc3f-cb0d50622a0f.png)
   
   --Feche a Modal: 
   ![image](https://user-images.githubusercontent.com/99425256/226546204-3f522298-f442-4133-9bc1-0b882a019257.png)
