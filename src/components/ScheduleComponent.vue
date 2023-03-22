@@ -52,14 +52,11 @@ function selectOptions() {
   const payload = {
     done: selected.value,
   }
+  useStateUser.taskStaste();
   setTimeout(() => {
-    useStateUser.taskStaste();
-  }, 1100);
-  if (payload.done == '') {
     useStateUser.doneTasks(payload)
-  } else {
-    useStateUser.doneTasks(payload)
-  }
+    
+  }, 1000);
 }
 </script>
 <template>
